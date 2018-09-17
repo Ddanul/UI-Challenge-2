@@ -7,6 +7,13 @@ input[type=checkbox], input[type=radio] {
     -moz-appearance:    none;
     appearance:         none;
 }
+.error{
+    border: 1px solid red;
+}
+.error_message{
+    color: red;
+    display: none;
+}
 .unchecked {
 	background: url('../img/form-elements-sprite.png') no-repeat -158px -239px;
 	width: 161px;

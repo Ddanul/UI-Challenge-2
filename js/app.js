@@ -2,7 +2,7 @@
 
 console.log('js linked');
 
-$('input[type=checkbox').on('click', function() {
+$('input[type=checkbox]').on('click', function() {
     if($(this).hasClass('checked')){
         $(this).removeClass('checked').addClass('unchecked');
     }else{
@@ -10,6 +10,12 @@ $('input[type=checkbox').on('click', function() {
     }
 });
 
-$('input[type=text').on('change', 'input', function() {
-    console.log('you typed!');
+$('#input1').on('blur', function() {
+    if(!$(this).val()){
+        $(this).addClass('error');
+        $('.error_message').show();
+    }else{
+        $(this).removeClass('error');
+        $('.error_message').hide();
+    }
 });
